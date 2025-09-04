@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   const [progress, setProgress] = useState<number>(0);
   const [message, setMessage] = useState<string>("");
 
-  const loadingMessages = [
+  const loadingMessages: string[] = [
     "Getting data from NASA...",
     "Analyzing secret code...",
     "Hacking the matrix...",
@@ -37,7 +37,7 @@ function App() {
 
     const interval = setInterval(() => {
       setLoadingText(loadingMessages[i % loadingMessages.length]);
-      setProgress((prev) => Math.min(prev + 10, 100));
+      setProgress((prev: number) => Math.min(prev + 10, 100));
       i++;
     }, 300);
 
