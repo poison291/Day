@@ -100,6 +100,9 @@ function App() {
       {message && !loading && (
         <h2 style={{ marginTop: "20px" }}>{message}</h2>
       )}
+      <div>
+        <p>Build by sanket burchatta</p>
+      </div>
     </div>
   );
 }
